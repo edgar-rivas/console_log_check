@@ -16,6 +16,7 @@ def main():
     mocaseed = 'Switching MoCA bonded seed'
     flasherror = 'seqNumber -1'
     qtnreboot = '***qtn_status_monitor detect QTN card reboot and request download image, need reload QTN 5G***'
+    fatalsignal = 'fatal signal'
 
     count1 = file.count(flash)
     count2 = file.count(boot)
@@ -30,6 +31,7 @@ def main():
     count11 = file.count(mocaseed)
     count12 = file.count(flasherror)
     count13 = file.count(qtnreboot)
+    count14 = file.count(fatalsignal)
 
     print 	file_name,'|','\n'			\
 		'flash',count1,'|',			\
@@ -43,7 +45,7 @@ def main():
 		'TR loop',count9,'|',			\
 		'Soap fault',count10,'|',		\
 		'MoCA Seed switch',count11,'|'		\
-		'Flash write error',count12,'|'	\
-		'QTN reboot',count13,'\n'
-
+		'Flash write error',count12,'|'		\
+		'QTN reboot',count13,'\n','|',		\
+		'Fatal Signal',count14,'\n'
 main()
